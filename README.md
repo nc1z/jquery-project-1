@@ -15,8 +15,18 @@
 - User goes bankrupt (Lose condition at $0)
 ```
 
-Wireframe (online/paper)
+### Wireframe (online/paper)
 
-HTML + CSS (framework)
+<img width="702" alt="Wireframe" src="https://user-images.githubusercontent.com/111836326/199918099-9ff36e50-00b4-4b06-9128-08e26436e6c1.png">
 
-Game Data + Event handler
+### HTML + CSS (framework)
+
+```
+WIP
+```
+
+### Game Data + Event handler
+
+```
+WIP
+```
