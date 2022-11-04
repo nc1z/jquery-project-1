@@ -8,7 +8,22 @@
     <title>Slot Machine</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h2>Easy Money</h2>
+      <div id="display">
+        <span class="res">0</span>
+        <span class="res">0</span>
+        <span class="res">0</span>
+      </div>
+      <div id="control">
+        <h4>Choose amount</h4>
+        <input type="number" id="positionSize" value="3" />
+        <button id="play">Play</button>
+      </div>
+      <div id="user">
+        <span id="balance">Account Balance: $0</span>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -95,3 +95,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* GLOBAL CSS */
+
+#user {
+  display: flex;
+  flex-direction: column;
+}
+
+#display {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
