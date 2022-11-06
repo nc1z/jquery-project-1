@@ -27,6 +27,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -109,4 +111,23 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#history {
+  overflow: auto;
+  height: 5rem;
+}
+
+.tablehistory {
+  border: 1px solid rgba(245, 245, 245, 0.2);
+  width: 15rem;
+  text-align: center;
+}
+
+.gain {
+  color: greenyellow;
+}
+
+.loss {
+  color: rgb(255, 102, 102);
 }
