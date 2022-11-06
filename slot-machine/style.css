@@ -117,11 +117,19 @@ button:focus-visible {
 #history {
   overflow: auto;
   height: 5rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tablerow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .tablehistory {
   border: 1px solid rgba(245, 245, 245, 0.2);
-  width: 12rem;
+  width: 20%;
   text-align: center;
 }
 
