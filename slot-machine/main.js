@@ -9,7 +9,7 @@ if (!balance) {
 let position = 0;
 
 const results = {
-  digits: [1, 2, 3],
+  digits: [1, 2, 3, 4, 5],
   history: [],
 };
 
@@ -166,16 +166,16 @@ const checkWin = () => {
 
   // Check Gains & Losses
   if (isStraight(results.digits)) {
-    // COMBO [6X]
+    // COMBO [12X]
     results.history.unshift([
-      position * 5,
+      position * 11,
       moment().format("h:mm:ss a"),
       results.digits,
-      "COMBO[6X]",
+      "STRAIGHT[12X]",
     ]);
-    balance += position * 6;
-    alert("Combo!");
-  } else if (counter[7] == 3) {
+    balance += position * 12;
+    alert("STRAIGHT COMBO!");
+  } else if (counter[7] == 5) {
     // JACKPOT 777 [20X]
     results.history.unshift([
       position * 19,
@@ -185,53 +185,51 @@ const checkWin = () => {
     ]);
     balance += position * 10;
     alert("JACKPOT!");
-  } else if (counter[7] > 0) {
-    if (counter[7] == 2) {
-      // NUMBER 7 PAIR [6X]
-      results.history.unshift([
-        position * 5,
-        moment().format("h:mm:ss a"),
-        results.digits,
-        "7PAIR[6X]",
-      ]);
-      balance += position * 6;
-    } else if (counter[7] == 1 && maxVal > 1) {
-      // NUMBER 7 + OTHER PAIR [4X]
-      results.history.unshift([
-        position * 3,
-        moment().format("h:mm:ss a"),
-        results.digits,
-        "PAIRWITH7[4X]",
-      ]);
-      balance += position * 4;
-    } else {
-      // NUMBER 7 ONCE [3X]
-      results.history.unshift([
-        position * 2,
-        moment().format("h:mm:ss a"),
-        results.digits,
-        "7ONCE[3X]",
-      ]);
-      balance += position * 3;
-    }
-  } else if (maxVal == 3) {
-    // ANY NUMBER THRICE [8X]
+  } else if (counter[7] >= 3) {
+    // NUMBER 7 STREAK [6X]
+    results.history.unshift([
+      position * 5,
+      moment().format("h:mm:ss a"),
+      results.digits,
+      "7PAIR[6X]",
+    ]);
+    balance += position * 6;
+  } else if (counter[7] == 2 && maxVal > 2) {
+    // PAIR 7 + OTHER STREAK [8X]
     results.history.unshift([
       position * 7,
       moment().format("h:mm:ss a"),
       results.digits,
-      "TRIPLE[8X]",
+      "PAIR7&STREAK[8X]",
     ]);
     balance += position * 8;
-  } else if (maxVal > 1) {
-    // ANY NUMBER TWICE [3X]
+  } else if (counter[7] == 2) {
+    // NUMBER 7 TWICE [3X]
     results.history.unshift([
       position * 2,
       moment().format("h:mm:ss a"),
       results.digits,
-      "DOUBLE[3X]",
+      "7TWICE[3X]",
     ]);
     balance += position * 3;
+  } else if (maxVal == 5) {
+    // ANY NUMBER FULL STREAK [15X]
+    results.history.unshift([
+      position * 14,
+      moment().format("h:mm:ss a"),
+      results.digits,
+      "FULLSTREAK[15X]",
+    ]);
+    balance += position * 15;
+  } else if (maxVal >= 3) {
+    // ANY NUMBER STREAK [5X]
+    results.history.unshift([
+      position * 4,
+      moment().format("h:mm:ss a"),
+      results.digits,
+      "STREAK[5X]",
+    ]);
+    balance += position * 5;
   } else {
     // LOSS
     results.history.unshift([
