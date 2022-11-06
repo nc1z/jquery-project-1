@@ -67,8 +67,10 @@ const render = () => {
       const historyRow = $("<tr>").addClass("tablerow");
       $("#history").append(historyRow);
       const history = $("<td>").addClass("tablehistory");
+      const combo = $("<td>").addClass("tablehistory");
       const pnl = $("<td>").addClass("tablehistory");
-      historyRow.append(history, pnl);
+      historyRow.append(history, combo, pnl);
+      combo.text(`${n[2]}`);
       history.text(`${n[1]}`);
       pnl.text(`${n[0]}`);
       if (n[0] > 0) {
@@ -113,22 +115,43 @@ const reset = () => {
 
 // WIN CONDITIONS ---------------------->
 const checkWin = () => {
+  const counter = {
+    0: 0,
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+  };
+
+  results.digits.forEach((n) => {
+    counter[n] += 1;
+  });
+
   if (results.digits.every((n) => n === 7)) {
     results.history.unshift([
-      position * 9,
+      position * 19,
       moment().format("MMM Do YY, h:mm:ss a"),
+      results.digits,
     ]);
     balance += position * 10;
-  } else if (results.digits.some((n) => n === 7)) {
+    alert("JACKPOT!");
+  } else if (counter[7] > 0) {
     results.history.unshift([
       position,
       moment().format("MMM Do YY, h:mm:ss a"),
+      results.digits,
     ]);
     balance += position * 2;
   } else {
     results.history.unshift([
       -position,
       moment().format("MMM Do YY, h:mm:ss a"),
+      results.digits,
     ]);
   }
 };
