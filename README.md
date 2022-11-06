@@ -1,4 +1,4 @@
-# jquery-project-1
+# jquery-Casino
 
 ## In progress:
 
