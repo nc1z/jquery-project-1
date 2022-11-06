@@ -4,7 +4,6 @@
 
 ### User Journey / Stories
 
-```
 - [x] User should have an account balance
 - [x] Account balance should be saved even upon browser refresh (local Storage)
 - [ ] Add transaction history
@@ -14,7 +13,6 @@
   - [ ] Winning combinations should multiply user's input position size and update account balance
 - [ ] Casino goes bankrupt (win condition at $XX amount)
 - [ ] User goes bankrupt (Lose condition at $0)
-```
 
 ### Wireframe (online/paper)
 
