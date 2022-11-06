@@ -17,6 +17,7 @@ const results = {
 const input = $("#positionSize");
 const playButton = $("#play");
 const balanceDisplay = $("#balance");
+const percentButtons = $(".percent");
 
 // WINDOW ONLOAD ---------------------->
 
@@ -31,14 +32,14 @@ input.on("change", (e) => {
 });
 
 playButton.on("click", () => {
-  if (position == 0) {
-    return alert("Please enter a valid amount");
-  }
   if (balance == 0) {
     return reset();
   }
+  if (position == 0) {
+    return alert("Please enter a valid amount");
+  }
   if (balance - position < 0) {
-    alert("Insufficient balance");
+    return alert("Insufficient balance");
   } else {
     balance -= position;
     localStorage.setItem("bal", balance);
@@ -46,6 +47,12 @@ playButton.on("click", () => {
   }
   checkWin();
   return render();
+});
+
+percentButtons.on("click", (e) => {
+  const amt = Math.floor(Number(e.target.value) * balance);
+  input.val(amt);
+  position = amt;
 });
 
 // FUNCTIONS ---------------------->
@@ -124,5 +131,4 @@ const checkWin = () => {
       moment().format("MMM Do YY, h:mm:ss a"),
     ]);
   }
-  input.attr("value", 0);
 };

@@ -6,8 +6,8 @@
 
 - [x] User should have an account balance
 - [x] Account balance should be saved even upon browser refresh (local Storage)
-- [ ] Add transaction history
-- [ ] User should have be able to choose their position size (fixed $ amount - a few choices in percentages%) in to the play the slot machine
+- [x] Add transaction history
+- [x] User should have be able to choose their position size (fixed $ amount - a few choices in percentages%) in to the play the slot machine
 - [ ] Slot machine should show spinning motion while loading (non-priority)
 - [ ] lot machine should have winning combinations
   - [ ] Winning combinations should multiply user's input position size and update account balance
