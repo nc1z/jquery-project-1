@@ -33,6 +33,10 @@ input.on("change", (e) => {
 });
 
 playButton.on("click", () => {
+  if (balance >= 10000) {
+    alert("Casino is bankrupt. You won!");
+    return reset();
+  }
   if (balance == 0) {
     return reset();
   }
@@ -100,6 +104,13 @@ const roll = () => {
     return Math.floor(Math.random() * 9);
   });
 
+  // TEST CONDITIONS: UNCOMMENT TO HACK CASINO -->
+  // results.digits = [7, 7, 7, 7, 7];
+  // results.digits = [6, 6, 6, 6, 6];
+  // results.digits = [1, 2, 3, 4, 5];
+  // results.digits = [1, 2, 3, 3, 5];
+  // results.digits = [5, 4, 3, 2, 1];
+
   // Reset results
   $("#display").children().remove();
 
@@ -122,7 +133,7 @@ const reset = () => {
 
 const isStraight = (arr) => {
   let res = true;
-  if (Math.min(arr) >= 0) {
+  if (arr[0] < arr[1]) {
     for (let i = 1; i < arr.length; i++) {
       if (res) {
         res = arr[i] - arr[i - 1] == 1;
@@ -221,6 +232,7 @@ const checkWin = () => {
       "FULLSTREAK[15X]",
     ]);
     balance += position * 15;
+    alert("FULL STREAK!!");
   } else if (maxVal >= 3) {
     // ANY NUMBER STREAK [5X]
     results.history.unshift([
