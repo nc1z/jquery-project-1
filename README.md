@@ -25,6 +25,10 @@
 
 <img width="1137" alt="Screenshot 2022-11-06 at 3 22 23 PM" src="https://user-images.githubusercontent.com/111836326/200159092-35d44466-41b8-4632-9881-e330a9928a28.png">
 
+#### Initial Styling Idea
+
+<img width="706" alt="Screenshot 2022-11-07 at 11 36 21 AM" src="https://user-images.githubusercontent.com/111836326/200221363-00eb467f-3731-4bc6-8652-956e83a3fb34.png">
+
 ### Wireframe
 
 <img width="702" alt="Wireframe" src="https://user-images.githubusercontent.com/111836326/199918099-9ff36e50-00b4-4b06-9128-08e26436e6c1.png">

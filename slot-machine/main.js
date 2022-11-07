@@ -91,6 +91,8 @@ const render = () => {
       }
       return;
     });
+  } else {
+    $("#history").append(`<span class="placeholder">P/L History</span>`);
   }
 
   while (results.history.length > 10) {

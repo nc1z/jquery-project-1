@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slot Machine</title>
   </head>
@@ -18,9 +22,11 @@
         <span class="res">0</span>
       </div>
       <div id="control">
-        <h4>Choose amount</h4>
-        <input type="number" id="positionSize" />
-        <button id="play">Roll</button>
+        <div>
+          <h4>Choose amount</h4>
+          <input type="number" id="positionSize" />
+          <button id="play">Roll</button>
+        </div>
         <div>
           <button class="percent" value="0.10">10%</button>
           <button class="percent" value="0.25">25%</button>
@@ -35,7 +41,9 @@
         <button id="reset">reset</button>
       </div>
     </div>
-    <div id="history"></div>
+    <div id="history">
+      <span class="placeholder">P/L History</span>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
