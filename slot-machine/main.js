@@ -197,14 +197,14 @@ const checkWin = () => {
     balance += position * 10;
     alert("JACKPOT!");
   } else if (counter[7] >= 3) {
-    // NUMBER 7 STREAK [6X]
+    // NUMBER 7 STREAK [8X]
     results.history.unshift([
-      position * 5,
+      position * 7,
       moment().format("h:mm:ss a"),
       results.digits,
-      "7PAIR[6X]",
+      "7PAIR[8X]",
     ]);
-    balance += position * 6;
+    balance += position * 8;
   } else if (counter[7] == 2 && maxVal > 2) {
     // PAIR 7 + OTHER STREAK [8X]
     results.history.unshift([
@@ -215,14 +215,14 @@ const checkWin = () => {
     ]);
     balance += position * 8;
   } else if (counter[7] == 2) {
-    // NUMBER 7 TWICE [3X]
+    // NUMBER 7 TWICE [4X]
     results.history.unshift([
-      position * 2,
+      position * 3,
       moment().format("h:mm:ss a"),
       results.digits,
-      "7TWICE[3X]",
+      "7TWICE[4X]",
     ]);
-    balance += position * 3;
+    balance += position * 4;
   } else if (maxVal == 5) {
     // ANY NUMBER FULL STREAK [15X]
     results.history.unshift([
@@ -234,14 +234,14 @@ const checkWin = () => {
     balance += position * 15;
     alert("FULL STREAK!!");
   } else if (maxVal >= 3) {
-    // ANY NUMBER STREAK [5X]
+    // ANY NUMBER STREAK [8X]
     results.history.unshift([
-      position * 4,
+      position * 7,
       moment().format("h:mm:ss a"),
       results.digits,
-      "STREAK[5X]",
+      "STREAK[8X]",
     ]);
-    balance += position * 5;
+    balance += position * 8;
   } else {
     // LOSS
     results.history.unshift([
