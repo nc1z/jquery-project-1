@@ -32,7 +32,7 @@ input.on("change", (e) => {
   position = Number(e.target.value);
 });
 
-playButton.on("click", () => {
+playButton.on("click", async () => {
   if (balance >= 10000) {
     alert("Casino is bankrupt. You won!");
     return reset();
