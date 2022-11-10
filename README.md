@@ -1,6 +1,6 @@
 # jquery-Casino
 
-## In progress:
+## Slot Machine
 
 ### User Journey / Stories
 
@@ -12,8 +12,8 @@
   - [x] Winning combinations should multiply user's input position size and update account balance
 - [x] Casino goes bankrupt (win condition at $XX amount)
 - [x] User goes bankrupt (Lose condition at $0)
-- [ ] Slot machine should show spinning motion while loading (non-priority)
-- [ ] Add animations and any CSS styling. Improve page aesthetics.
+- [x] Slot machine should show spinning motion while loading (non-priority)
+- [x] Add animations and any CSS styling. Improve page aesthetics.
 
 ### Progression
 
@@ -32,15 +32,3 @@
 ### Wireframe
 
 <img width="702" alt="Wireframe" src="https://user-images.githubusercontent.com/111836326/199918099-9ff36e50-00b4-4b06-9128-08e26436e6c1.png">
-
-### HTML + CSS (framework)
-
-```
-WIP
-```
-
-### Game Data + Event handler
-
-```
-WIP
-```
